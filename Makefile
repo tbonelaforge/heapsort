@@ -1,10 +1,10 @@
-all: quicksort_test.bin disc_intersections.bin
+all: sortheap_test.bin
 
-heapsort_test.bin: heapsort_test.c heapsort.o heapsort.h sortable.h sort_util.o
-	gcc -I ./ heapsort_test.c heapsort.o sort_util.o -o heapsort_test.bin
+sortheap_test.bin: sortheap_test.c sortheap.o sortable.o sortheap.h sortable.h
+	gcc -I ./ sortheap_test.c sortheap.o sortable.o -o sortheap_test.bin
 
-heapsort.o: heapsort.c heapsort.h sortable.h sort_util.h
-	gcc -I ./ -c heapsort.c
+sortheap.o: sortheap.c sortheap.h sortable.h
+	gcc -I ./ -c sortheap.c
 
-sort_util.o: sort_util.c sort_util.h
-	gcc -I ./ -c sort_util.c
+sortable.o: sortable.c sortable.h
+	gcc -I ./ -c sortable.c

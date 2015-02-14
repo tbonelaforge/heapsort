@@ -1,9 +1,8 @@
 
-#include "heapsort.h"
+#include "sortheap.h"
 #include "sortable.h"
-#include "sort_util.h"
 
-void heapsort(Sortable self) {
+void sortheap(Sortable self) {
     int unsorted;
 
     heapify(self);

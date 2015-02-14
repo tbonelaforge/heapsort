@@ -3,7 +3,7 @@
 
 #include "sortable.h"
 
-void heapsort(Sortable);
+void sortheap(Sortable);
 void heapify(Sortable);
 void sift_down(Sortable, int, int);
 int dominates(Sortable, int, int);

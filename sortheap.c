@@ -1,10 +1,10 @@
+#include <stdio.h>
 
 #include "sortheap.h"
 #include "sortable.h"
 
 void sortheap(Sortable self) {
     int unsorted;
-
     heapify(self);
     unsorted = self->how_many_elements;
     while (unsorted) {
@@ -16,7 +16,6 @@ void sortheap(Sortable self) {
 
 void heapify(Sortable self) {
     int start = self->how_many_elements - 1;
-
     while (start >= 0) {
         sift_down(self, start, self->how_many_elements);
         start -= 1;
